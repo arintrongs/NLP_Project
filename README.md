@@ -3,6 +3,6 @@ This reposiroty is a part of the course named “2110594 NLP - Natural Language 
 
 To download data used in this project.
 ```
-wget --no-check-certificate https://media.githubusercontent.com/media/l3lackclevil/NLP_Project/master/data/the_standard_data.csv
+wget --no-check-certificate https://github.com/l3lackclevil/NLP_Project/raw/master/data/data.zip
 ```
-<b>Note :</b> Data will be added as a zip file later.
+
