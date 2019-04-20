@@ -1,16 +1,17 @@
 # -*- coding: utf-8 -*-
 import scrapy
+from scrapy_selenium import SeleniumRequest
 
 
 class NewsSpider(scrapy.Spider):
     name = 'news'
     # allowed_domains = ['thestandard.co']
     start_urls = ['https://thestandard.co/category/news/page/' +
-                  str(page_num) for page_num in range(1, 966)]
+                  str(page_num) for page_num in range(830, 987)]
 
     def parse(self, response):
         for url in response.xpath('//h3[@class=\'news-title\']/a/@href').getall():
-            yield scrapy.Request(url, callback=self.news)
+            yield SeleniumRequest(url=url, callback=self.news)
 
     def news(self, response):
         headline = response.xpath(
